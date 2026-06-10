@@ -826,6 +826,18 @@
             color: #13ca5e;
             font-weight: bold;
         }
+
+        /* クリアホワイトニング（医療ホワイトニング）の注意書き */
+        .self-note {
+            background-color: #fff4f4;
+            border: 1px solid #d00000;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-top: 12px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #d00000;
+        }
     </style>
 </head>
 
@@ -839,7 +851,7 @@
     </div>
 
     <div class="container">
-        <h1>ホームネイルサロンROSARIUM ケア＋<br>予約フォーム
+        <h1>ROSARIUM ケア＋<br>予約フォーム
         </h1>
         <!-- 追加するボタン -->
         <div class="repeat-booking-wrapper">
@@ -915,12 +927,6 @@
                 <button type="button" id="o_hand_9" data-time="15" onclick="selectirradiations(this)">1週間以内のお直し 0円</button>
                 <button type="button" id="o_hand_10" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
                 <button type="button" id="o_hand_11" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
-                <button type="button" id="o_hand_12" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
-                <button type="button" id="o_hand_13" data-time="90" onclick="selectirradiations(this)">フットネイル 0円</button>
-                <button type="button" id="o_hand_14" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_hand_15" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_hand_16" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_hand_17" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
@@ -951,11 +957,6 @@
                 <button type="button" id="o_foot_14" data-time="20" onclick="selectirradiations(this)">3Dアート（中） 800円</button>
                 <button type="button" id="o_foot_15" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
                 <button type="button" id="o_foot_16" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
-                <button type="button" id="o_foot_17" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
-                <button type="button" id="o_foot_18" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_foot_19" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_foot_20" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_foot_21" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
@@ -965,14 +966,6 @@
                 <button type="button" id="s_care_1" data-time="60" onclick="selectSymptom(this)">長さ整え 1100円</button>
                 <button type="button" id="s_care_2" data-time="90" onclick="selectSymptom(this)">自爪のお手入れ 5000円</button>
                 <button type="button" id="s_care_3" data-time="90" onclick="selectSymptom(this)">フットケア 6000円</button>
-            </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
-            <div class="irradiations">
-                <button type="button" id="o_care_1" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
-                <button type="button" id="o_care_2" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_care_3" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_care_4" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_care_5" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
@@ -986,6 +979,13 @@
                 <button type="button" id="s_self_5" data-time="60" onclick="selectSymptom(this)">【リピーター様】ソフトホワイトニング 5500円</button>
                 <button type="button" id="s_self_6" data-time="75" onclick="selectSymptom(this)">【リピーター様】クリアホワイトニング 8800円</button>
                 <button type="button" id="s_self_7" data-time="130" onclick="selectSymptom(this)">1Day集中コース（ソフト） 12000円</button>
+                <button type="button" id="s_self_8" data-time="30" onclick="selectSymptom(this)">【ソフトホワイトニング回数券購入】3回 13500円</button>
+                <button type="button" id="s_self_9" data-time="30" onclick="selectSymptom(this)">【ソフトホワイトニング回数券購入】6回 24000円</button>
+                <button type="button" id="s_self_10" data-time="30" onclick="selectSymptom(this)">【ソフトホワイトニング回数券購入】12回 42000円</button>
+                <button type="button" id="s_self_11" data-time="90" onclick="selectSymptom(this)">【クリアホワイトニング10日コース】 33000円</button>
+            </div>
+            <div class="self-note">
+                ※【ご新規様】クリアホワイトニング（医療ホワイトニング）は、医療機関と提携して行うメニューです。施術代のほかに、<strong>処方箋代＋ジェル代が別途かかります。</strong>
             </div>
         </div>
 
@@ -997,18 +997,11 @@
                 <button type="button" id="s_tumeiku_3" data-time="120" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 都度払い（ジェルあり） 13000円</button>
                 <button type="button" id="s_tumeiku_4" data-time="60" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルなし） 77000円</button>
                 <button type="button" id="s_tumeiku_5" data-time="120" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルあり） 88000円</button>
-                <button type="button" id="s_tumeiku_6" data-time="90" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース（平日限定割） 一括払い 70000円</button>
             </div>
             <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
             <div class="irradiations">
-                <button type="button" id="o_tumeiku_1" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
                 <button type="button" id="o_tumeiku_2" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
                 <button type="button" id="o_tumeiku_3" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
-                <button type="button" id="o_tumeiku_4" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
-                <button type="button" id="o_tumeiku_5" data-time="90" onclick="selectirradiations(this)">フットネイル 0円</button>
-                <button type="button" id="o_tumeiku_6" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_tumeiku_7" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_tumeiku_8" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
@@ -1017,13 +1010,6 @@
             <div class="symptoms">
                 <button type="button" id="s_relax_1" data-time="20" onclick="selectSymptom(this)">手元うるおいトリートメント20分 2500円</button>
                 <button type="button" id="s_relax_2" data-time="30" onclick="selectSymptom(this)">ドライヘッドスパ30分 3800円</button>
-            </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
-            <div class="irradiations">
-                <button type="button" id="o_relax_1" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_relax_2" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_relax_3" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_relax_4" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
@@ -1034,13 +1020,6 @@
                 <button type="button" id="s_off_2" data-time="90" onclick="selectSymptom(this)">当店ジェルオフ+ケア込み 3800円</button>
                 <button type="button" id="s_off_3" data-time="43" onclick="selectSymptom(this)">他店オフのみ 2800円</button>
                 <button type="button" id="s_off_4" data-time="75" onclick="selectSymptom(this)">他店オフのみ+ケア込み 4400円</button>
-            </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
-            <div class="irradiations">
-                <button type="button" id="o_off_1" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_off_2" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
-                <button type="button" id="o_off_3" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（6回） 24000円</button>
-                <button type="button" id="o_off_4" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券（12回） 42000円</button>
             </div>
         </div>
 
