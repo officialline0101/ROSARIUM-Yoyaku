@@ -813,6 +813,19 @@
             margin-bottom: 10px;
             white-space: normal;
         }
+
+        /* 選択があるカテゴリーボタンの目印（別カテゴリー表示中でも選択済みが分かるように） */
+        .menu-sections button.has-selection {
+            border: 2px solid #13ca5e;
+            background-color: #eafaf0;
+            font-weight: 600;
+        }
+
+        .menu-sections button.has-selection::before {
+            content: "✓ ";
+            color: #13ca5e;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -900,8 +913,8 @@
                 <button type="button" id="o_hand_18" data-time="80" onclick="selectirradiations(this)">【長さ出し】チップ10本 8000円</button>
                 <button type="button" id="o_hand_8" data-time="10" onclick="selectirradiations(this)">亀裂矯正 550円</button>
                 <button type="button" id="o_hand_9" data-time="15" onclick="selectirradiations(this)">1週間以内のお直し 0円</button>
-                <button type="button" id="o_hand_10" data-time="17" onclick="selectirradiations(this)">【セット割】スペシャルハンドトリートメント 2500円</button>
-                <button type="button" id="o_hand_11" data-time="30" onclick="selectirradiations(this)">【セット割】ドライヘッドスパ 3300円</button>
+                <button type="button" id="o_hand_10" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
+                <button type="button" id="o_hand_11" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
                 <button type="button" id="o_hand_12" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
                 <button type="button" id="o_hand_13" data-time="90" onclick="selectirradiations(this)">フットネイル 0円</button>
                 <button type="button" id="o_hand_14" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
@@ -936,8 +949,8 @@
                 <button type="button" id="o_foot_12" data-time="15" onclick="selectirradiations(this)">シール・ジェルラインアート：1個 100円〜</button>
                 <button type="button" id="o_foot_13" data-time="15" onclick="selectirradiations(this)">3Dアート（小） 600円</button>
                 <button type="button" id="o_foot_14" data-time="20" onclick="selectirradiations(this)">3Dアート（中） 800円</button>
-                <button type="button" id="o_foot_15" data-time="17" onclick="selectirradiations(this)">【セット割】スペシャルハンドトリートメント 2500円</button>
-                <button type="button" id="o_foot_16" data-time="30" onclick="selectirradiations(this)">【セット割】ドライヘッドスパ 3300円</button>
+                <button type="button" id="o_foot_15" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
+                <button type="button" id="o_foot_16" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
                 <button type="button" id="o_foot_17" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
                 <button type="button" id="o_foot_18" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
                 <button type="button" id="o_foot_19" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
@@ -980,15 +993,17 @@
             <div class="labeltyuuou"><span class="highlight-text">◆自爪育成◆</span></div>
             <div class="symptoms">
                 <button type="button" id="s_tumeiku_1" data-time="150" onclick="selectSymptom(this)">体験【Tumeiku】｜自爪育成ケア 6500円</button>
-                <button type="button" id="s_tumeiku_2" data-time="90" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 都度払い 8800円</button>
-                <button type="button" id="s_tumeiku_3" data-time="90" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース（平日限定割） 一括払い 70000円</button>
-                <button type="button" id="s_tumeiku_4" data-time="90" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い 77000円</button>
+                <button type="button" id="s_tumeiku_2" data-time="60" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 都度払い（ジェルなし） 10000円</button>
+                <button type="button" id="s_tumeiku_3" data-time="120" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 都度払い（ジェルあり） 13000円</button>
+                <button type="button" id="s_tumeiku_4" data-time="60" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルなし） 77000円</button>
+                <button type="button" id="s_tumeiku_5" data-time="120" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルあり） 88000円</button>
+                <button type="button" id="s_tumeiku_6" data-time="90" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース（平日限定割） 一括払い 70000円</button>
             </div>
             <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
             <div class="irradiations">
                 <button type="button" id="o_tumeiku_1" data-time="35" onclick="selectirradiations(this)">ホワイトニング回数券利用 0円</button>
-                <button type="button" id="o_tumeiku_2" data-time="17" onclick="selectirradiations(this)">【セット割】スペシャルハンドトリートメント 2500円</button>
-                <button type="button" id="o_tumeiku_3" data-time="30" onclick="selectirradiations(this)">【セット割】ドライヘッドスパ 3300円</button>
+                <button type="button" id="o_tumeiku_2" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
+                <button type="button" id="o_tumeiku_3" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
                 <button type="button" id="o_tumeiku_4" data-time="45" onclick="selectirradiations(this)">ソフトホワイトニング（初回価格） 3500円</button>
                 <button type="button" id="o_tumeiku_5" data-time="90" onclick="selectirradiations(this)">フットネイル 0円</button>
                 <button type="button" id="o_tumeiku_6" data-time="30" onclick="selectirradiations(this)">ホワイトニング回数券購入（3回） 13500円</button>
@@ -1000,8 +1015,8 @@
         <div id="cat-relax" class="menu-section">
             <div class="labeltyuuou"><span class="highlight-text">◆リラク◆</span></div>
             <div class="symptoms">
-                <button type="button" id="s_relax_1" data-time="20" onclick="selectSymptom(this)">スペシャルハンドトリートメント 1800円</button>
-                <button type="button" id="s_relax_2" data-time="15" onclick="selectSymptom(this)">ドライヘッドスパ 2200円</button>
+                <button type="button" id="s_relax_1" data-time="20" onclick="selectSymptom(this)">手元うるおいトリートメント20分 2500円</button>
+                <button type="button" id="s_relax_2" data-time="30" onclick="selectSymptom(this)">ドライヘッドスパ30分 3800円</button>
             </div>
             <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
             <div class="irradiations">
@@ -1137,35 +1152,42 @@
         });
 
         function applyPreviousSelection() {
-            const savedMenu = localStorage.getItem('selectedMenu') || '';
             const savedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms') || '[]');
             const savedIrradiations = JSON.parse(localStorage.getItem('selectedIrradiations') || '[]');
 
-            if (!savedMenu && savedSymptoms.length === 0 && savedIrradiations.length === 0) {
+            if (savedSymptoms.length === 0 && savedIrradiations.length === 0) {
                 alert('前回のメニューが見つかりません💦');
                 return;
             }
 
-            // ✅ 前回のカテゴリーを表示（showMenu内で選択状態はリセットされる）
-            if (savedMenu) {
-                showMenu(savedMenu);
+            // いったん全選択をクリア
+            clearAllSelections();
+
+            // ✅ 前回のメニュー・オプションを再選択（カテゴリーをまたいで復元）
+            savedSymptoms.forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.add('active');
+            });
+            savedIrradiations.forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.add('active');
+            });
+
+            // ✅ 選択があるカテゴリーのうち、最初のものを表示
+            const firstId = savedSymptoms[0] || savedIrradiations[0];
+            const firstBtn = document.getElementById(firstId);
+            if (firstBtn) {
+                const section = firstBtn.closest('.menu-section');
+                if (section) showMenu(section.id);
             }
 
-            // ✅ メニュー再選択（複数可）
-            savedSymptoms.forEach(symptomId => {
-                const symptomButton = document.getElementById(symptomId);
-                if (symptomButton && !symptomButton.classList.contains('active')) {
-                    symptomButton.click();
-                }
-            });
-
-            // ✅ オプション再選択
-            savedIrradiations.forEach(irradiationId => {
-                const irradiationButton = document.getElementById(irradiationId);
-                if (irradiationButton && !irradiationButton.classList.contains('active')) {
-                    irradiationButton.click();
-                }
-            });
+            // ✅ 日時はリセットして再集計・表示
+            selectedFullDate = '';
+            recomputeSelections();
+            updateCategoryIndicators();
+            updateCalendarVisibility();
+            fetchAvailability(currentDate);
+            updateDisplayInfo();
 
             // ✅ カレンダーへスクロール
             const targetElement = document.getElementById('calendar1');
@@ -1249,7 +1271,8 @@
         // メニュー選択状況に応じてカレンダーの表示／非表示を切り替える
         function updateCalendarVisibility() {
             const calendarContainer = document.querySelector('.calendar-container');
-            const hasActive = document.querySelectorAll('.menu-section.active .symptoms button.active').length > 0;
+            // カテゴリーをまたいで、メニューが1つでも選択されていればカレンダーを表示
+            const hasActive = document.querySelectorAll('.symptoms button.active').length > 0;
             calendarContainer.style.display = hasActive ? 'block' : 'none';
         }
 
@@ -1262,16 +1285,12 @@
             // 選択された日時をリセット
             selectedFullDate = '';
 
-            // ボタンの選択状態を切り替える（複数選択可）
+            // ボタンの選択状態を切り替える（カテゴリーをまたいで複数選択可）
             button.classList.toggle('active');
 
-            // 現在のカテゴリーで選択中のメニューを集計
-            const activeButtons = document.querySelectorAll('.menu-section.active .symptoms button.active');
-            selectedSymptom = Array.from(activeButtons).map(btn => btn.textContent.trim());
-            selectedMenuTime = Array.from(activeButtons).reduce((sum, btn) => sum + (parseInt(btn.dataset.time, 10) || 0), 0);
-
-            // 復元用に選択中メニューのIDを保存
-            localStorage.setItem('selectedSymptoms', JSON.stringify(Array.from(activeButtons).map(btn => btn.id)));
+            // 全カテゴリーの選択を再集計
+            recomputeSelections();
+            updateCategoryIndicators();
 
             // カレンダーの表示／更新
             updateCalendarVisibility();
@@ -1284,96 +1303,99 @@
         function selectirradiations(button) {
             selectedFullDate = '';
 
-            // トグル（複数選択可）
+            // トグル（カテゴリーをまたいで複数選択可）
             button.classList.toggle('active');
 
-            // 現在のカテゴリーで選択中のオプションのみを集計
-            const selectedButtons = document.querySelectorAll('.menu-section.active .irradiations button.active');
-
-            // 復元用にIDを保存
-            localStorage.setItem('selectedIrradiations', JSON.stringify(Array.from(selectedButtons).map(btn => btn.id)));
-
-            // 表示用データ生成
-            irradiationsCount = Array.from(selectedButtons).map(btn => btn.textContent.trim()).join(', ');
-
-            // オプションの合計時間を集計（data-time から取得）
-            selectedirradiationsTime = Array.from(selectedButtons).reduce((sum, btn) => sum + (parseInt(btn.dataset.time, 10) || 0), 0);
+            // 全カテゴリーの選択を再集計
+            recomputeSelections();
+            updateCategoryIndicators();
 
             fetchAvailability(currentDate);
             updateDisplayInfo();
         }
 
-        // メニューの選択を保存する関数
-        function selectMenu(element) {
-            element.classList.toggle('selected');
+        // 全カテゴリーを横断して、選択中のメニュー・オプションを集計する
+        function recomputeSelections() {
+            // メニュー（全カテゴリーの選択中ボタン）
+            const activeSymptomButtons = document.querySelectorAll('.symptoms button.active');
+            selectedSymptom = Array.from(activeSymptomButtons).map(btn => btn.textContent.trim());
+            selectedMenuTime = Array.from(activeSymptomButtons).reduce((sum, btn) => sum + (parseInt(btn.dataset.time, 10) || 0), 0);
 
-            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
-            const menuId = element.id;
+            // オプション（全カテゴリーの選択中ボタン）
+            const activeOptionButtons = document.querySelectorAll('.irradiations button.active');
+            irradiationsCount = Array.from(activeOptionButtons).map(btn => btn.textContent.trim()).join(', ');
+            selectedirradiationsTime = Array.from(activeOptionButtons).reduce((sum, btn) => sum + (parseInt(btn.dataset.time, 10) || 0), 0);
 
-            if (element.classList.contains('selected')) {
-                selectedMenus.push(menuId);
-            } else {
-                selectedMenus = selectedMenus.filter(id => id !== menuId);
-            }
+            // コース：選択があるカテゴリー名を集約（例：ハンドネイル、フットネイル）
+            const cats = [];
+            document.querySelectorAll('.menu-section').forEach(section => {
+                const hasSel = section.querySelectorAll('.symptoms button.active, .irradiations button.active').length > 0;
+                if (hasSel) {
+                    const catBtn = document.querySelector(`.menu-sections button[onclick="showMenu('${section.id}')"]`);
+                    cats.push(catBtn ? catBtn.textContent.trim() : section.id);
+                }
+            });
+            selectedMenu = cats.join('、');
 
-            localStorage.setItem('selectedMenus', JSON.stringify(selectedMenus));
+            // 復元用に保存（全カテゴリー横断）
+            localStorage.setItem('selectedSymptoms', JSON.stringify(Array.from(activeSymptomButtons).map(btn => btn.id)));
+            localStorage.setItem('selectedIrradiations', JSON.stringify(Array.from(activeOptionButtons).map(btn => btn.id)));
         }
 
+        // 選択があるカテゴリーボタンに目印（✓）を付ける
+        function updateCategoryIndicators() {
+            document.querySelectorAll('.menu-section').forEach(section => {
+                const hasSel = section.querySelectorAll('.symptoms button.active, .irradiations button.active').length > 0;
+                const catBtn = document.querySelector(`.menu-sections button[onclick="showMenu('${section.id}')"]`);
+                if (catBtn) {
+                    catBtn.classList.toggle('has-selection', hasSel);
+                }
+            });
+        }
+
+        // すべての選択を解除する
+        function clearAllSelections() {
+            document.querySelectorAll('.symptoms button.active, .irradiations button.active').forEach(btn => btn.classList.remove('active'));
+            selectedSymptom = [];
+            selectedMenuTime = 0;
+            irradiationsCount = '';
+            selectedirradiationsTime = 0;
+            updateCategoryIndicators();
+        }
+
+        // カテゴリーの表示を切り替える（選択状態はカテゴリーをまたいで保持する）
         function showMenu(menu) {
-            // 選択されたカテゴリー名を取得
-            let selectedButton = document.querySelector(`.menu-sections button[onclick="showMenu('${menu}')"]`);
-
-            if (selectedButton) {
-                selectedMenu = selectedButton.innerText;
-            }
-
-            // 復元用にカテゴリー識別子を保存
-            localStorage.setItem('selectedMenu', menu);
-
-            // すべてのカテゴリーボタンの選択状態をリセット
+            // すべてのカテゴリーボタンの「表示中」ハイライトを解除（選択状態は保持）
             document.querySelectorAll('.menu-sections button').forEach(button => {
                 button.classList.remove('active');
             });
 
-            // 各セクションを非表示＋ボタン状態リセット
+            // すべてのセクションを非表示にする（メニュー・オプションの選択状態は保持）
             document.querySelectorAll('.menu-section').forEach(section => {
                 section.classList.remove('active');
-                section.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
             });
 
-            // 対応するカテゴリーボタンを選択状態にする
+            // 押されたカテゴリーボタンを「表示中」にする
+            const selectedButton = document.querySelector(`.menu-sections button[onclick="showMenu('${menu}')"]`);
             if (selectedButton) {
                 selectedButton.classList.add('active');
-                selectMenu(selectedButton);
             }
 
             // 選択されたカテゴリーセクションを表示
             document.getElementById(menu).classList.add('active');
 
-            // メニューとオプションをリセット
-            selectedSymptom = [];          // メニューのリセット
-            selectedMenuTime = 0;          // メニュー時間のリセット
-            irradiationsCount = '';        // オプションのリセット
-            selectedirradiationsTime = 0;  // オプション時間のリセット
-            selectedFullDate = '';         // 希望日時のリセット
+            // 最後に開いたカテゴリーを保存
+            localStorage.setItem('lastOpenedMenu', menu);
 
-            // カレンダーを非表示に戻す
+            // 既存の選択を再集計して表示を更新（カテゴリーをまたいで保持される）
+            recomputeSelections();
+            updateCategoryIndicators();
             updateCalendarVisibility();
-
-            // 表示を更新
             updateDisplayInfo();
         }
 
-        // ページ読み込み時にローカルストレージから選択状態を復元
-        document.addEventListener("DOMContentLoaded", () => {
-            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
-            selectedMenus.forEach(menuId => {
-                let menuButton = document.getElementById(menuId);
-                if (menuButton) {
-                    menuButton.classList.add('selected');
-                }
-            });
-        });
+        // （旧）カテゴリー選択状態の復元は廃止。
+        // カテゴリーまたぎ選択に変更したため、再来店時の復元は「前回と同じメニューで予約する」ボタンで行う。
 
         function selectDate(cell) {
             // "unavailable" クラスが付いている場合はクリックを無効化
