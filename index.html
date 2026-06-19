@@ -104,15 +104,15 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #3e3f41, #0c0c0c);
-            color: white;
+            background: #ffb6c1;
+            color: #333333;
             padding: 20px;
             border-radius: 0 0px 0px 0px;
             text-align: center;
             display: block;
             margin: -20px -15px 20px -15px;
             font-size: 26px;
-            font-weight: 100;
+            font-weight: 700;
             box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
@@ -889,8 +889,9 @@
                 <button type="button" id="s_mayoi_1" data-time="150" onclick="selectSymptom(this)">相談して決める（ハンド）</button>
                 <button type="button" id="s_mayoi_2" data-time="150" onclick="selectSymptom(this)">相談して決める（フット）</button>
             </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
             <div class="irradiations">
+                <button type="button" id="o_mayoi_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
                 <button type="button" id="o_mayoi_1" data-time="60" onclick="selectirradiations(this)">【新規】オフ付け替え（ジェルのみ）</button>
                 <button type="button" id="o_mayoi_2" data-time="10" onclick="selectirradiations(this)">スカルプ・パーツ付き1本</button>
                 <button type="button" id="o_mayoi_3" data-time="15" onclick="selectirradiations(this)">【長さ出し】ジェル1本</button>
@@ -913,8 +914,9 @@
                 <button type="button" id="s_hand_7" data-time="150" onclick="selectSymptom(this)">季節の定額ネイル　design 7500円</button>
                 <button type="button" id="s_hand_8" data-time="45" onclick="selectSymptom(this)">1週間以内の部分お直し 0円</button>
             </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
             <div class="irradiations">
+                <button type="button" id="o_hand_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
                 <button type="button" id="o_hand_1" data-time="60" onclick="selectirradiations(this)">【オフ】当店付け替え 1100円</button>
                 <button type="button" id="o_hand_2" data-time="60" onclick="selectirradiations(this)">【新規】オフ付け替え（ジェルのみ） 0円</button>
                 <button type="button" id="o_hand_3" data-time="60" onclick="selectirradiations(this)">【再来】他店オフ付け替え 1650円</button>
@@ -943,8 +945,9 @@
                 <button type="button" id="s_foot_4" data-time="106" onclick="selectSymptom(this)">グラデ・フレンチ（フットバス付き） 7500円</button>
                 <button type="button" id="s_foot_5" data-time="45" onclick="selectSymptom(this)">1週間以内お直し 0円</button>
             </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
             <div class="irradiations">
+                <button type="button" id="o_foot_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
                 <button type="button" id="o_foot_1" data-time="60" onclick="selectirradiations(this)">【オフ】当店付け替え 1100円</button>
                 <button type="button" id="o_foot_2" data-time="60" onclick="selectirradiations(this)">【新規】オフ付け替え（ジェルのみ） 0円</button>
                 <button type="button" id="o_foot_3" data-time="60" onclick="selectirradiations(this)">【再来】他店オフ付け替え 1650円</button>
@@ -971,6 +974,10 @@
                 <button type="button" id="s_care_2" data-time="90" onclick="selectSymptom(this)">自爪のお手入れ 5000円</button>
                 <button type="button" id="s_care_3" data-time="90" onclick="selectSymptom(this)">フットケア 6000円</button>
             </div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
+            <div class="irradiations">
+                <button type="button" id="o_care_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
+            </div>
         </div>
 
         <div id="cat-self" class="menu-section">
@@ -991,6 +998,10 @@
             <div class="self-note">
                 ※【ご新規様】クリアホワイトニング（医療ホワイトニング）は、医療機関と提携して行うメニューです。施術代のほかに、<strong>処方箋代＋ジェル代が別途かかります。</strong>
             </div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
+            <div class="irradiations">
+                <button type="button" id="o_self_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
+            </div>
         </div>
 
         <div id="cat-tumeiku" class="menu-section">
@@ -1002,8 +1013,9 @@
                 <button type="button" id="s_tumeiku_4" data-time="60" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルなし） 77000円</button>
                 <button type="button" id="s_tumeiku_5" data-time="120" onclick="selectSymptom(this)">【Tumeiku】｜自爪育成コース 一括払い（ジェルあり） 88000円</button>
             </div>
-            <div class="labeltyuuou"><span class="highlight-text">オプション</span></div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
             <div class="irradiations">
+                <button type="button" id="o_tumeiku_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
                 <button type="button" id="o_tumeiku_2" data-time="20" onclick="selectirradiations(this)">【セット割】手元うるおいトリートメント20分 1800円</button>
                 <button type="button" id="o_tumeiku_3" data-time="15" onclick="selectirradiations(this)">15分クイックドライヘッドスパ 2200円</button>
             </div>
@@ -1015,6 +1027,10 @@
                 <button type="button" id="s_relax_1" data-time="20" onclick="selectSymptom(this)">手元うるおいトリートメント20分 2500円</button>
                 <button type="button" id="s_relax_2" data-time="30" onclick="selectSymptom(this)">ドライヘッドスパ30分 3800円</button>
             </div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
+            <div class="irradiations">
+                <button type="button" id="o_relax_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
+            </div>
         </div>
 
         <div id="cat-off" class="menu-section">
@@ -1024,6 +1040,10 @@
                 <button type="button" id="s_off_2" data-time="90" onclick="selectSymptom(this)">当店ジェルオフ+ケア込み 3800円</button>
                 <button type="button" id="s_off_3" data-time="43" onclick="selectSymptom(this)">他店オフのみ 2800円</button>
                 <button type="button" id="s_off_4" data-time="75" onclick="selectSymptom(this)">他店オフのみ+ケア込み 4400円</button>
+            </div>
+            <div class="labeltyuuou"><span class="highlight-text">オプション</span><span class="required">必須</span></div>
+            <div class="irradiations">
+                <button type="button" id="o_off_none" data-time="0" onclick="selectirradiations(this)">オプションなし</button>
             </div>
         </div>
 
@@ -1439,14 +1459,22 @@
                 return;
             }
 
+            if (!formData.irradiationsCount) {
+                alert('オプションを選択してください。\n（オプションが不要な場合は「オプションなし」をお選びください）');
+                return;
+            }
+
             if (!formData.dates) {
                 alert('希望日時を選択してください。');
                 return;
             }
 
-            // メニューとオプションを結合（オプションがある場合のみ）
-            const menuText = formData.irradiationsCount
-                ? `${formData.selectedSymptom.join(',')},${formData.irradiationsCount}`
+            // 「オプションなし」は送信内容から除外し、メニューとオプションを結合
+            const realOptions = (formData.irradiationsCount || '')
+                .split(', ')
+                .filter(opt => opt && opt !== 'オプションなし');
+            const menuText = realOptions.length > 0
+                ? `${formData.selectedSymptom.join(',')},${realOptions.join(',')}`
                 : formData.selectedSymptom.join(',');
 
             // LINEトークにメッセージを送信
