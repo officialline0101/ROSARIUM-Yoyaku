@@ -1589,6 +1589,10 @@
             // 現在の日時を取得
             const now = new Date();
 
+            // 直前予約を防ぐため、現在時刻から2時間後までの枠は✕にする
+            const bookingBufferHours = 2;
+            const earliestBookable = new Date(now.getTime() + bookingBufferHours * 60 * 60 * 1000);
+
             // テーブルの内容を更新
             for (let i = 0; i < 7; i++) {
                 const day = new Date(currentDate);
@@ -1641,8 +1645,8 @@
                     }
 
                     // ここで終了時間を使った条件処理を行う
-                    // 例えば、リアルタイムで既に過ぎた時間帯は×にする
-                    if (slotStart < now) {
+                    // リアルタイムで既に過ぎた時間帯、および現在時刻から2時間以内の時間帯は×にする
+                    if (slotStart < earliestBookable) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
